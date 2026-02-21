@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .admin-panel { display: none; }
+        .login { text-align: center; margin-top: 50px; }
+        .admin-header { background-color: #4CAF50; color: white; padding: 1em; text-align: center; }
+        .admin-content { padding: 20px; }
+    </style>
+    <script>
+        function checkPassword() {
+            var password = prompt('Enter the admin password:');
+            if (password === '123456') {
+                document.querySelector('.admin-panel').style.display = 'block';
+                document.querySelector('.login').style.display = 'none';
+            } else {
+                alert('Incorrect password! Access denied.');
+            }
+        }
+    </script>
+</head>
+<body onload="checkPassword()">
+    <div class="login">
+        <h2>Please Login</h2>
+    </div>
+    <div class="admin-panel">
+        <div class="admin-header">
+            <h1>Admin Panel</h1>
+        </div>
+        <div class="admin-content">
+            <h2>Management Features</h2>
+            <ul>
+                <li>User Management</li>
+                <li>Data Analytics</li>
+                <li>Settings</li>
+                <li>Reports</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
