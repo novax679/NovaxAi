@@ -1,0 +1,2 @@
+# NovaxAi
+yapay zeka yazılım
