@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main AI Website</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .purple-light {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            border-radius: 50%;
+            position: absolute;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s;
+        }
+
+        .content {
+            text-align: center;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="purple-light" id="light"></div>
+    <div class="content">
+        <h1>Welcome to the AI Website</h1>
+        <h2>Admin Panel Access</h2>
+        <p>Secure area for managing your AI features.</p>
+        <h2>Educational Content</h2>
+        <p>Learn about software development and HTML.</p>
+    </div>
+    <script>
+        const light = document.getElementById('light');
+        document.addEventListener('mousemove', (e) => {
+            light.style.left = e.pageX + 'px';
+            light.style.top = e.pageY + 'px';
+        });
+    </script>
+</body>
+</html>
